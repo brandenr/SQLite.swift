@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SQLite.swift"
-  s.version          = "0.9.2"
+  s.version          = "0.9.3"
   s.summary          = "A type-safe, Swift-language layer over SQLite3 for iOS and OS X."
 
   s.description      = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     intent.
                        DESC
 
-  s.homepage         = "https://github.com/stephencelis/SQLite.swift"
+  s.homepage         = "https://github.com/brandenr/SQLite.swift"
   s.license          = 'MIT'
   s.author           = { "Stephen Celis" => "stephen@stephencelis.com" }
   s.source           = { :git => "https://github.com/stephencelis/SQLite.swift.git", :tag => s.version.to_s }
@@ -28,4 +28,11 @@ Pod::Spec.new do |s|
   s.libraries = 'sqlite3'
   s.source_files = 'SQLite/**/*.{c,h,m,swift}'
   s.private_header_files = 'SQLite/Core/fts3_tokenizer.h'
+  
+  s.preserve_paths = 'podstuff/**/*'
+  s.prepare_command = 'podstuff/scripts/injectXcodePath.sh'
+  s.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphoneos',
+                            'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphonesimulator',
+                            'SWIFT_INCLUDE_PATHS[sdk=macosx*]' => '$(SRCROOT)/SQLite.swift/podstuff/macosx' }
+
 end
