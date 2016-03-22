@@ -22,6 +22,24 @@
 // THE SOFTWARE.
 //
 
+#if COCOAPODS
+    #if os(OSX)
+        import SQLiteMacOSX
+    #elseif os(iOS)
+        #if (arch(i386) || arch(x86_64))
+            import SQLiteiPhoneSimulator
+        #else
+            import SQLiteiPhoneOS
+        #endif
+    #elseif os(tvOS)
+        #if (arch(i386) || arch(x86_64))
+            import SQLiteAppleTVSimulator
+        #else
+            import SQLiteAppleTVOS
+        #endif
+    #endif
+#endif
+
 public typealias Star = (Expression<Binding>?, Expression<Binding>?) -> Expression<Void>
 
 public func *(_: Expression<Binding>?, _: Expression<Binding>?) -> Expression<Void> {
