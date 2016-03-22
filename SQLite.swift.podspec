@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'podstuff/**/*'
   s.prepare_command = 'sh podstuff/scripts/injectXcodePath.sh'
   s.xcconfig = { 'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphoneos',
-                            'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphonesimulator',
-                            'SWIFT_INCLUDE_PATHS[sdk=macosx*]' => '$(SRCROOT)/SQLite.swift/podstuff/macosx',
-                            'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]' => '$(SRCROOT)/SQLite.swift/podstuff/tvos',
-                            'SWIFT_INCLUDE_PATHS[sdk=appletvos*]' => '$(SRCROOT)/SQLite.swift/podstuff/tvos' }
+                 'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphonesimulator',
+                 'SWIFT_INCLUDE_PATHS[sdk=macosx*]' => '$(SRCROOT)/SQLite.swift/podstuff/macosx',
+                 'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]' => '$(SRCROOT)/SQLite.swift/podstuff/appletvos',
+                 'SWIFT_INCLUDE_PATHS[sdk=appletvos*]' => '$(SRCROOT)/SQLite.swift/podstuff/appletvsimulator' }
 
 end

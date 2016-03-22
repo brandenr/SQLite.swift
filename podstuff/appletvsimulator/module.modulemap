@@ -1,6 +1,4 @@
-framework module SQLite {
-    umbrella header "SQLite.h"
-
+module SQLite [system] {
     header "/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator.sdk/usr/include/sqlite3.h"
 
     export *
