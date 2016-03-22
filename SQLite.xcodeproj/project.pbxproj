@@ -904,6 +904,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/appletvos/module.modulemap;
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/appletvsimulator/module.modulemap;
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/iphoneos/module.modulemap;
+				"SWIFT_INCLUDE_PATHS[sdk=macosx*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/macosx/module.modulemap;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -947,6 +951,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/appletvos/module.modulemap;
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/appletvsimulator/module.modulemap;
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/iphoneos/module.modulemap;
+				"SWIFT_INCLUDE_PATHS[sdk=macosx*]" = /Users/brandenrussell/Documents/Code/SQLite.swift/podstuff/macosx/module.modulemap;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1099,6 +1107,7 @@
 				03A65E6C1C6BB0F60062603F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03A65E701C6BB0F60062603F /* Build configuration list for PBXNativeTarget "SQLiteTests tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1107,6 +1116,7 @@
 				03A65E6E1C6BB0F60062603F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE247ACD1C3F04ED00AE3E12 /* Build configuration list for PBXProject "SQLite" */ = {
 			isa = XCConfigurationList;
