@@ -1,5 +1,11 @@
-module SQLite [system] {
-    header "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/sqlite3.h"
+framework module SQLite {
+    umbrella header "SQLite.h"
+    
+    module * { export * }
+}
 
+module sqlite3 {
+    header "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/sqlite3.h"
+    
     export *
 }
