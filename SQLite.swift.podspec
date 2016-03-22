@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/brandenr/SQLite.swift"
   s.license          = 'MIT'
   s.author           = { "Stephen Celis" => "stephen@stephencelis.com" }
-  s.source           = { :git => "https://github.com/stephencelis/SQLite.swift.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/brandenr/SQLite.swift.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/stephencelis'
 
   s.module_name      = 'SQLite'
@@ -24,15 +24,16 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
   s.osx.deployment_target = "10.9"
 
-  s.module_map = "podstuff/module.modulemap"
   s.libraries = 'sqlite3'
   s.source_files = 'SQLite/**/*.{c,h,m,swift}'
   s.private_header_files = 'SQLite/Core/fts3_tokenizer.h'
   
   s.preserve_paths = 'podstuff/**/*'
-  s.prepare_command = 'podstuff/scripts/injectXcodePath.sh'
-  s.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphoneos',
+  s.prepare_command = 'sh podstuff/scripts/injectXcodePath.sh'
+  s.xcconfig = { 'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphoneos',
                             'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]' => '$(SRCROOT)/SQLite.swift/podstuff/iphonesimulator',
-                            'SWIFT_INCLUDE_PATHS[sdk=macosx*]' => '$(SRCROOT)/SQLite.swift/podstuff/macosx' }
+                            'SWIFT_INCLUDE_PATHS[sdk=macosx*]' => '$(SRCROOT)/SQLite.swift/podstuff/macosx',
+                            'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]' => '$(SRCROOT)/SQLite.swift/podstuff/tvos',
+                            'SWIFT_INCLUDE_PATHS[sdk=appletvos*]' => '$(SRCROOT)/SQLite.swift/podstuff/tvos' }
 
 end
