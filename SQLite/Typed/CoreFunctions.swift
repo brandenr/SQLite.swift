@@ -22,6 +22,8 @@
 // THE SOFTWARE.
 //
 
+import Foundation
+
 extension ExpressionType where UnderlyingType : Number {
 
     /// Builds a copy of the expression wrapped with the `abs` function.
